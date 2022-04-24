@@ -1,0 +1,27 @@
+.cta {
+  padding-top: 103px;
+  padding-bottom: 92px;
+  min-height: 680px;
+  background: url("@img/background2.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+}
+
+.cta__title {
+  max-width: 810px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+.cta__text {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 36px;
+}
+.cta__body {
+  max-width: 500px;
+}

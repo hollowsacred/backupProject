@@ -1,0 +1,29 @@
+
+//Imports
+@import "./reset";
+@import "./variables";
+@import "./header";
+@import "./btn";
+@import "./hero";
+@import "./benefits";
+@import "./cta";
+@import "./forms";
+@import "./carousel";
+@import "./slick";
+@import "./catalog";
+@import "./catalog-item";
+//fonts
+
+//Global
+body {
+  font-family: "Museo Sans Cyrl",sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  
+}
+.container {
+  max-width: $containerWidth;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+

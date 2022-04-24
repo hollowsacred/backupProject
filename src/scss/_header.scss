@@ -1,0 +1,59 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  padding: 24px 0;
+  color:white;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.header__logo {
+  width: 251px;
+  height: 45px;
+}
+.header__picture {
+    width: 100%;
+}
+.header__offical {
+  display: flex;
+  flex-direction: column;
+}
+.header__title {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+.header__members {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+.header__callback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.header__tel {
+    font-size: 18px;
+line-height: 1.2;
+font-weight: 700;
+color: #ffffff;
+margin-bottom: 8px;
+}
+.header__btn {
+    font-size: 12px;
+line-height: 1.2;
+font-weight: 500;
+text-transform: uppercase;
+color: #ffffff;
+}
+

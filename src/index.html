@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+@@include('html/head.html', {
+"title":"Главная",
+})
+
+<body>
+    @@include('html/header.html')
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__body">
+                    <h1 class="hero__title">Подбор пульсометра</h1>
+                    <h2 class="hero__subtitle">с учётом Вашего уровня подготовки</h2>
+                    <div class="hero__items">
+                        <div class="hero__item">
+                            <img src="@img/timer.png" alt="Icon" class="hero__icon">
+                            <span class="hero__text">Время подбора:<br>
+                                10 минут</span>
+                        </div>
+                        <div class="hero__item">
+                            <img src="@img/cart.png" alt="Icon" class="hero__icon">
+                            <span class="hero__text">Бесплатная<br>
+                                доставка</span>
+                        </div>
+                        <div class="hero__item">
+                            <img src="@img/message.png" alt="Icon" class="hero__icon">
+                            <span class="hero__text">Ответим на все <br>вопросы</span>
+                        </div>
+                    </div>
+                    <a href="#" class="hero__btn btn">заказать консультацию</a>
+                    <a href="#" class="hero__link">или <span class="underline">ПЕРЕЙТИ В КАТАЛОГ</span></a>
+                </div>
+
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits__title">НАШИ ПРЕИМУЩЕСТВА</div>
+                <div class="benefits__row">
+                    <div class="benefit-card">
+                        <img src="@img/cupNew.png" alt="Icon" class="benefit-card__icon">
+                        <div class="benefit-card__title">Делимся опытом</div>
+                        <p class="benefit-card__text">Наши сотрудники всегда готовы поделиться своим опытом,
+                            так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="@img/heartNew.png" alt="Icon" class="benefit-card__icon">
+                        <div class="benefit-card__title">Заботимся о здоровье</div>
+                        <p class="benefit-card__text">Мы работаем для того,
+                            чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим
+                            близким!</p>
+                    </div>
+                    <div class="benefit-card">
+                        <img src="@img/shoeNew.png" alt="Icon" class="benefit-card__icon">
+                        <div class="benefit-card__title">Учим бегать</div>
+                        <p class="benefit-card__text">Помогаем с обучением
+                            правильной технике бега!
+                            Дружим с крупнейшей школой бега в России - I LOVE RUNNING.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="cta">
+            <div class="container">
+                <h2 class="cta__title">Получите бесплатную консультацию
+                    по подбору пульсометра</h2>
+                <div class="cta__body">
+                    <span class="cta__text">Просто заполните форму заявки<br>
+                        и мы перезвоним вам в течении 10 минут</span>
+                    <form class="cta__form forms" action="">
+                        <input name="name" type="text" class="form__name form-input" placeholder="Ваше имя">
+                        <input name="tel" type="text" class="form__tel form-input" placeholder="Ваш телефон">
+                        <input name="email" type="text" class="form__email form-input" placeholder="Ваш E-mail">
+                        <input type="submit" class="form__btn btn" value="заказать консультацию">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="carousel">
+            <div class="container">
+                <div class="carousel__inner">
+                    <div><img src="@img/BigWatch.jpg" alt="Image"></div>
+                    <div><img src="@img/watchSlide1.jpg" alt="Image"></div>
+                    <div><img src="@img/watchSlide2.jpg" alt="Image"></div>
+                </div>
+                <div class="carousel__tiny">
+                    <div><img src="@img/BigWatch.jpg" alt="Image"></div>
+                    <div><img src="@img/watchSlide1.jpg" alt="Image"></div>
+                    <div><img src="@img/watchSlide2.jpg" alt="Image"></div>
+                </div>
+
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="catalog__title">Каталог пульсометров</h2>
+                <ul class="catalog__tabs">
+                    <li class="catalog__tab catalog__tab_active"><a href="#" class=" "><span>Для фитнеса</span></a>
+                    <li class="catalog__tab"><a href="#" class=""><span>для бега</span></a>
+                    </li>
+                    <li class="catalog__tab"><a href="#" class=""><span>для триатлона</span></a>
+                    </li>
+                </ul>
+                <div class="catalog__content">
+                    <div class="catalog-item">
+                        <div class="catalog-item__body">
+                            <img src="@img/PulseWatch.jpg" alt="Picture" class="catalog__img">
+                            <div class="catalog-item__title">Пульсометр Polar FT1</div>
+                            <div class="catalog-item__text">Для первых шагов в тренировках, основанных на сердечном
+                                ритме
+                            </div>
+                            <a href="" class="catalog-item__link">ПОДРОБНЕЕ</a>
+                        </div>
+                        <div class="catalog-item__body_active">
+                            <ul class="catalog-item__list-benefits">
+                                <li class="catalog-item__benefit">Вы услышите звуковое оповещение о нужном пульсе во время тренировки</li>
+                                <li class="catalog-item__benefit">Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                                <li class="catalog-item__benefit">Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                                <li class="catalog-item__benefit">Вы сможете посмотреть данные по 10 тренировкам.</li>
+                                <a href="" class="catalog-item__link catalog-item__link_active ">Назад</a>
+                            </ul>
+                        </div>
+                        <div class="catalog-item__footer">
+                            <div class="catalog-item__prices">
+                                <div class="catalog-item__oldPrice">4 750 руб.</div>
+                                <div class="catalog-item__currentPrice">4 500 руб.</div>
+                            </div>
+                            <button class="catalog-item__btn btn">КУПИТЬ</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="catalog__content">
+
+                </div>
+                <div class="catalog__content"></div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html')
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
