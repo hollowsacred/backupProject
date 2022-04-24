@@ -491,13 +491,14 @@ button[data-controls=next] {
   border: 2px solid #e8e8e8;
 }
 .catalog-item__body {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .catalog-item__body_active {
-  padding-left: 15px;
+  display: none;
+  padding-left: 21px;
 }
 
 .catalog-item__benefit {
@@ -508,8 +509,8 @@ button[data-controls=next] {
   color: #555555;
   margin-bottom: 23px;
 }
-.catalog-item__benefit:last-child {
-  margin-bottom: 84px;
+.catalog-item__benefit:last-of-type {
+  margin-bottom: 69px;
 }
 .catalog-item__benefit::before {
   content: "";
@@ -558,7 +559,7 @@ button[data-controls=next] {
 
 .catalog-item__footer {
   width: 100%;
-  padding-top: 21px;
+  padding-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
