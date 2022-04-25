@@ -8,6 +8,21 @@ $(document).ready(function () {
     prevArrow: `<button type="button" class="slick-prev"><img src="img/prevArrow.png"></button>`,
     nextArrow: `<button type="button" class="slick-next"><img src="img/nextArrow.png"></button>`,
   });
+  $("ul.catalog__tabs").on(
+    "click",
+    "li:not(.catalog__tab_active)",
+    function () {
+      $(this)
+        .addClass("catalog__tab_active")
+        .siblings()
+        .removeClass("catalog__tab_active")
+        .closest("div.container")
+        .find("div.catalog__content")
+        .removeClass("catalog__content_active")
+        .eq($(this).index())
+        .addClass("catalog__content_active");
+    }
+  );
 });
 
 let slider = tns({
@@ -22,23 +37,33 @@ let slider = tns({
   nav: false,
 });
 
-let catalog = document.querySelector(".catalog-item__body");
-let catalogActive = document.querySelector(".catalog-item__body_active");
-let count = 1;
-let link = document.querySelectorAll(".catalog-item__link");
-for (let i = 0; i < link.length; i++) {
-  link[i].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    catalog.style.display = "none";
-    catalogActive.style.display = "block";
+let catalogItems = document.querySelectorAll(".catalog-item");
 
-    if (count % 2 == 0) {
-      catalog.style.display = "flex";
-      catalogActive.style.display = "none";
-      console.log("ребутош " + count);
-    }
+function addEventHandler(item) {
+  let catalogLink = item.querySelector(".catalog-item__link");
+  let catalogLinkActive = item.querySelector(".catalog-item__link_active");
+  let catalogBody = item.querySelector(".catalog-item__body");
+  let catalogBodyActive = item.querySelector(".catalog-item__body_active");
+  console.log(catalogLinkActive);
+  let count = 1;
+  function toggleSlide(links) {
+    
+    links.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      catalogBody.style.display = "none";
+      catalogBodyActive.style.display = "flex";
+      
+      if (count % 2 == 0) {
+        catalogBody.style.display = "flex";
+      catalogBodyActive.style.display = "none";
+      }
 
-    count++;
-    console.log(count);
-  });
+      count++;
+    });
+  }
+  toggleSlide(catalogLink);
+  toggleSlide(catalogLinkActive);
+}
+for (let i = 0; i < catalogItems.length; i++) {
+  addEventHandler(catalogItems[i]);
 }

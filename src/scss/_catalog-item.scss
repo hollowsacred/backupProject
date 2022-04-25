@@ -1,9 +1,12 @@
 .catalog__content {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  &_active {
+    display:flex;
+  }
 }
 .catalog-item {
   max-width: 300px;
@@ -19,6 +22,11 @@
     &_active {
       display:none;
         padding-left: 21px;
+    }
+  }
+  &__link {
+    &_active {
+      padding-right: 21px;
     }
   }
 }

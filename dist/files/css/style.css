@@ -477,11 +477,14 @@ button[data-controls=next] {
 }
 
 .catalog__content {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+.catalog__content_active {
+  display: flex;
 }
 
 .catalog-item {
@@ -499,6 +502,9 @@ button[data-controls=next] {
 .catalog-item__body_active {
   display: none;
   padding-left: 21px;
+}
+.catalog-item__link_active {
+  padding-right: 21px;
 }
 
 .catalog-item__benefit {
