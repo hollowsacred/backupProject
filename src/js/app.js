@@ -2,12 +2,14 @@ import * as Slick from "./modules/slick.min.js";
 import * as functions from "./modules/functions.js";
 console.log("Кабаок");
 $(document).ready(function () {
+  // Slider
   $(".carousel__inner").slick({
     //    adaptiveHeight:true,
     autoplay: false,
     prevArrow: `<button type="button" class="slick-prev"><img src="img/prevArrow.png"></button>`,
     nextArrow: `<button type="button" class="slick-next"><img src="img/nextArrow.png"></button>`,
   });
+  // Tabs
   $("ul.catalog__tabs").on(
     "click",
     "li:not(.catalog__tab_active)",
@@ -23,6 +25,35 @@ $(document).ready(function () {
         .addClass("catalog__content_active");
     }
   );
+  // Modals
+  $('[data-modal=consultation]').on('click',function () {
+    $('.overlay , #consultation').fadeIn();
+   
+  });
+  $('.modal__close').on('click',function() {
+    $('.overlay , #consultation,#order,#thanks').fadeOut();
+
+  });
+
+  $('.catalog-item__btn').each(function (i) {
+    $(this).on('click',function () {
+     $('#order .modal__subtitle').text($('.catalog-item__title').eq(i).text());
+     $('.overlay , #order').fadeIn();
+    })
+  })
+  $('form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      type:"POST",
+      url:"/mailer/smart.php",
+      data:$(this).serialize()
+    }).done(function () {
+      $(this).find("input").val("");
+
+      $('form').trigger("reset");
+    });
+    return false;
+  });
 });
 
 let slider = tns({
@@ -67,3 +98,4 @@ function addEventHandler(item) {
 for (let i = 0; i < catalogItems.length; i++) {
   addEventHandler(catalogItems[i]);
 }
+

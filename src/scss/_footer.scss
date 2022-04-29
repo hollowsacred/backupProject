@@ -1,0 +1,55 @@
+.footer {
+  position: relative;
+  height: 630px;
+  text-align: center;
+}
+.footer__map {
+}
+.footer__contacts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px 68px;
+  margin: 0 auto;
+  width: 460px;
+  height: 270px;
+  background-color: #c70101;
+}
+.footer__contacts-street {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 36px;
+}
+.footer__contacts-tel {
+    display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 38px;
+}
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer__social {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  &:first-child {
+    background: url("@img/facebook.png") no-repeat center;
+  }
+  &:nth-child(2) {
+    background: url("@img/instagram.png") no-repeat center;
+  }
+  &:last-child {
+    background: url("@img/pinterest.png") no-repeat center;
+  }
+}
