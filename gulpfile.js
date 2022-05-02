@@ -37,6 +37,7 @@ function watcher() {
   gulp.watch(path.watch.files, copy);
   gulp.watch(path.watch.html, copyHtml);
   gulp.watch(path.watch.scss,copyScss);
+  gulp.watch(path.watch.img,copyImage);
   gulp.watch(path.watch.js,js);
 }
 const mainTasks = gulp.parallel(copy, copyHtml, copyImage, copyScss, js);
